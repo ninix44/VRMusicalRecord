@@ -4,11 +4,15 @@ import org.vmstudio.visor.api.ModLoader;
 import org.vmstudio.visor.api.VisorAPI;
 import org.vmstudio.musicalrecord.core.client.MusicalRecordAddonClient;
 import org.vmstudio.musicalrecord.core.server.MusicalRecordAddonServer;
+import org.vmstudio.musicalrecord.core.handler.MusicalRecordHandler;
+import org.vmstudio.musicalrecord.fabric.platform.FabricClientTickRegistry;
 import net.fabricmc.api.ModInitializer;
 
 public class MusicalRecordMod implements ModInitializer {
     @Override
     public void onInitialize() {
+        FabricClientTickRegistry.init(new MusicalRecordHandler()::onTick);
+
         if(ModLoader.get().isDedicatedServer()){
             VisorAPI.registerAddon(
                     new MusicalRecordAddonServer()

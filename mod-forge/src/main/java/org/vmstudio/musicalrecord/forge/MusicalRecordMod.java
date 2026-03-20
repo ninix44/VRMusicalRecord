@@ -5,11 +5,15 @@ import org.vmstudio.visor.api.VisorAPI;
 import org.vmstudio.musicalrecord.core.client.MusicalRecordAddonClient;
 import org.vmstudio.musicalrecord.core.common.MusicalRecord;
 import org.vmstudio.musicalrecord.core.server.MusicalRecordAddonServer;
+import org.vmstudio.musicalrecord.core.handler.MusicalRecordHandler;
+import org.vmstudio.musicalrecord.forge.platform.ForgeClientTickRegistry;
 import net.minecraftforge.fml.common.Mod;
 
 @Mod(MusicalRecord.MOD_ID)
 public class MusicalRecordMod {
     public MusicalRecordMod(){
+        ForgeClientTickRegistry.init(new MusicalRecordHandler()::onTick);
+
         if(ModLoader.get().isDedicatedServer()){
             VisorAPI.registerAddon(
                     new MusicalRecordAddonServer()
