@@ -1,4 +1,4 @@
-package your.mod.example.core.client.overlays;
+package org.vmstudio.musicalrecord.core.client.overlays;
 
 import me.phoenixra.atumvr.api.misc.color.AtumColor;
 import org.vmstudio.visor.api.client.gui.overlays.RegisterVROverlayTemplate;
@@ -15,18 +15,18 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 @RegisterVROverlayTemplate(
-        id = VROverlayTemplateExample.ID,
-        name = VROverlayTemplateExample.NAME,
-        description = VROverlayTemplateExample.DESCRIPTION
+        id = VROverlayTemplateMusicalRecord.ID,
+        name = VROverlayTemplateMusicalRecord.NAME,
+        description = VROverlayTemplateMusicalRecord.DESCRIPTION
 )
-public class VROverlayTemplateExample extends VROverlayTemplateScreen {
-    public static final String ID = "template_example";
-    public static final String NAME = "Example template";
-    public static final String DESCRIPTION = "Example description";
+public class VROverlayTemplateMusicalRecord extends VROverlayTemplateScreen {
+    public static final String ID = "template_musicalrecord";
+    public static final String NAME = "MusicalRecord template";
+    public static final String DESCRIPTION = "MusicalRecord overlay template";
 
-    private final Component text = Component.literal("Template Overlay Example");
+    private final Component text = Component.literal("MusicalRecord Template Overlay");
 
-    public VROverlayTemplateExample(@NotNull VisorAddon owner, @NotNull String id) {
+    public VROverlayTemplateMusicalRecord(@NotNull VisorAddon owner, @NotNull String id) {
         super(owner, id);
         //if you want it to be enabled once created
         setEnabled(true);

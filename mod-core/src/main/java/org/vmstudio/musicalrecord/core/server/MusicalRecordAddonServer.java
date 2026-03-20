@@ -1,12 +1,12 @@
-package your.mod.example.core.server;
+package org.vmstudio.musicalrecord.core.server;
 
 import org.vmstudio.visor.api.common.addon.VisorAddon;
-import your.mod.example.core.common.VisorExample;
+import org.vmstudio.musicalrecord.core.common.MusicalRecord;
 import net.minecraft.network.chat.Component;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-public class ExampleAddonServer implements VisorAddon {
+public class MusicalRecordAddonServer implements VisorAddon {
     @Override
     public void onAddonLoad() {
 
@@ -14,21 +14,21 @@ public class ExampleAddonServer implements VisorAddon {
 
     @Override
     public @Nullable String getAddonPackagePath() {
-        return "your.mod.example.core.server";
+        return "org.vmstudio.musicalrecord.core.server";
     }
 
     @Override
     public @NotNull String getAddonId() {
-        return VisorExample.MOD_ID;
+        return MusicalRecord.MOD_ID;
     }
 
     @Override
     public @NotNull Component getAddonName() {
-        return Component.literal(VisorExample.MOD_NAME);
+        return Component.literal(MusicalRecord.MOD_NAME);
     }
 
     @Override
     public String getModId() {
-        return VisorExample.MOD_ID;
+        return MusicalRecord.MOD_ID;
     }
 }

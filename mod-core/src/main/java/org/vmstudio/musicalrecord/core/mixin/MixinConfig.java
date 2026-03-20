@@ -1,7 +1,7 @@
-package your.mod.example.core.mixin;
+package org.vmstudio.musicalrecord.core.mixin;
 
 import org.vmstudio.visor.api.ModLoader;
-import your.mod.example.core.common.VisorExample;
+import org.vmstudio.musicalrecord.core.common.MusicalRecord;
 import org.objectweb.asm.tree.ClassNode;
 import org.spongepowered.asm.mixin.extensibility.IMixinConfigPlugin;
 import org.spongepowered.asm.mixin.extensibility.IMixinInfo;
@@ -45,9 +45,9 @@ public class MixinConfig implements IMixinConfigPlugin {
 
     @Override
     public boolean shouldApplyMixin(String targetClassName, String mixinClassName) {
-        if (!ModLoader.get().isModLoaded(VisorExample.MOD_ID)) {
+        if (!ModLoader.get().isModLoaded(MusicalRecord.MOD_ID)) {
             LOGGER.info("{} failed to load, canceled applying mixin '{}'",
-                    VisorExample.MOD_NAME, mixinClassName
+                    MusicalRecord.MOD_NAME, mixinClassName
             );
             return false;
         }

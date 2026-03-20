@@ -1,18 +1,18 @@
 {
   "schemaVersion": 1,
-  "id": "visor_example",
+  "id": "musicalrecord",
   "version": "${version}",
 
-  "name": "VisorExample",
-  "description": "The Example Addon for Visor",
+  "name": "VisorMusicalRecord",
+  "description": "The MusicalRecord Addon for Visor",
   "authors": [
-    "PhoenixRa"
+    "Ninix"
   ],
   "license": "MIT",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "your.mod.example.fabric.ExampleMod"
+      "org.vmstudio.musicalrecord.fabric.MusicalRecordMod"
     ]
   },
   "mixins": [
