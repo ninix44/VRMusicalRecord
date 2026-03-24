@@ -56,8 +56,8 @@ public class MusicalRecordHandler {
 
                     if (state.is(Blocks.JUKEBOX) && !state.getValue(JukeboxBlock.HAS_RECORD)) {
                         AABB deepSlotBox = new AABB(
-                            targetPos.getX() + 0.35, targetPos.getY() + 0.6, targetPos.getZ() + 0.35,
-                            targetPos.getX() + 0.65, targetPos.getY() + 0.9, targetPos.getZ() + 0.65
+                            targetPos.getX() + 0.35, targetPos.getY() + 0.67, targetPos.getZ() + 0.35,
+                            targetPos.getX() + 0.65, targetPos.getY() + 0.95, targetPos.getZ() + 0.65
                         );
                         if (handBox.intersects(deepSlotBox)) {
                             if (!wasInside) {
