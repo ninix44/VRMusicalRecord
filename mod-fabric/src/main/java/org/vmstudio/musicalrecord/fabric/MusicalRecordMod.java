@@ -11,7 +11,7 @@ import net.fabricmc.api.ModInitializer;
 public class MusicalRecordMod implements ModInitializer {
     @Override
     public void onInitialize() {
-        FabricClientTickRegistry.init(new MusicalRecordHandler()::onTick);
+        FabricClientTickRegistry.init(MusicalRecordHandler.INSTANCE::onTick);
 
         if(ModLoader.get().isDedicatedServer()){
             VisorAPI.registerAddon(

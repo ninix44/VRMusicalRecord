@@ -1,9 +1,12 @@
 package org.vmstudio.musicalrecord.core.client;
 
 import org.vmstudio.visor.api.VisorAPI;
+import org.vmstudio.visor.api.ModLoader;
+import org.vmstudio.visor.api.client.render.RenderPipelineStage;
 import org.vmstudio.visor.api.common.addon.VisorAddon;
 import org.vmstudio.musicalrecord.core.client.overlays.VROverlayMusicalRecord;
 import org.vmstudio.musicalrecord.core.common.MusicalRecord;
+import org.vmstudio.musicalrecord.core.handler.MusicalRecordHandler;
 import net.minecraft.network.chat.Component;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -23,6 +26,11 @@ public class MusicalRecordAddonClient implements VisorAddon {
                                 )
                         )
                 );
+
+        ModLoader.get().addToRenderPipeline(
+                RenderPipelineStage.AFTER_TRANSLUCENT,
+                MusicalRecordHandler.INSTANCE::renderInsertionAnimation
+        );
     }
 
     @Override

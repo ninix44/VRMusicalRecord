@@ -12,7 +12,7 @@ import net.minecraftforge.fml.common.Mod;
 @Mod(MusicalRecord.MOD_ID)
 public class MusicalRecordMod {
     public MusicalRecordMod(){
-        ForgeClientTickRegistry.init(new MusicalRecordHandler()::onTick);
+        ForgeClientTickRegistry.init(MusicalRecordHandler.INSTANCE::onTick);
 
         if(ModLoader.get().isDedicatedServer()){
             VisorAPI.registerAddon(
