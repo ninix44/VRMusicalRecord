@@ -31,7 +31,7 @@ public class MusicalRecordHandler {
     public static final MusicalRecordHandler INSTANCE = new MusicalRecordHandler();
     private static final int INSERT_ANIMATION_TICKS = 18;
     private static final int INTERACTION_COOLDOWN_TICKS = 12;
-    private static final int POST_INSERT_COOLDOWN_TICKS = 40;
+    private static final int POST_INSERT_COOLDOWN_TICKS = 20;
     private static final int INSERT_CONFIRM_TIMEOUT_TICKS = 40;
 
     private PendingInsertion pendingInsertion;
@@ -111,8 +111,8 @@ public class MusicalRecordHandler {
 
                     if (state.is(Blocks.JUKEBOX) && !state.getValue(JukeboxBlock.HAS_RECORD)) {
                         AABB deepSlotBox = new AABB(
-                            targetPos.getX() + 0.43, targetPos.getY() + 0.83, targetPos.getZ() + 0.43,
-                            targetPos.getX() + 0.57, targetPos.getY() + 1.06, targetPos.getZ() + 0.57
+                            targetPos.getX() + 0.40, targetPos.getY() + 0.83, targetPos.getZ() + 0.40,
+                            targetPos.getX() + 0.60, targetPos.getY() + 1.06, targetPos.getZ() + 0.60
                         );
                         if (handBox.intersects(deepSlotBox)) {
                             if (!wasInside) {
